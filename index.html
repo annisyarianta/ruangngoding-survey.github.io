@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Survey Form</title>
+	</head>
+	<body>
+		<form name="Form" onsubmit="return validateForm()">
+			<header class="header">
+				<h1 id="title">Ruang Ngoding Survey Form</h1>
+				<p id="description">
+					Please fill out this survey so we can improve the quality of
+					our platform
+				</p>
+			</header>
+			<div class="container">
+				<div class="form-group">
+					<label for="name">Name</label>
+					<input
+						type="text"
+						id="name"
+						class="form-control"
+						name="name"
+						placeholder="Enter Your Name" />
+					<div class="error" id="nameErr"></div>
+				</div>
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input
+						type="text"
+						id="email"
+						class="form-control"
+						name="email"
+						placeholder="Enter Your Email"/>
+					<div class="error" id="emailErr"></div>
+				</div>
+				<div class="form-group">
+					<label for="age"
+						>Input your age (years):</label
+					>
+					<input
+						type="number"
+						id="age"
+						class="form-control"
+						name="age"
+						placeholder="Enter Your Age"/>
+					<div class="error" id="ageErr"></div>
+				</div>
+				<div class="form-group">
+					<label for="option">
+						Which option describe your current role?
+					</label>
+					<select name="role" id="role" class="form-control">
+						<option value="">(select one)</option>
+						<option value="Student">Student</option>
+						<option value="Teacher">Teacher</option>
+						<option value="Freelancer">Freelancer</option>
+						<option value="Other">Other</option>
+					</select>
+					<div class="error" id="roleErr"></div>
+				</div>
+				<div class="form-group">
+					<label>Would you recommend Ruang Ngoding to a friend?</label>
+					<div class="error" id="recommendErr"></div>
+					<div class="form-inline" id="recommend">
+						<label>
+							<input
+								type="radio"
+								name="recommend"
+								class="input-radio"
+								value="definitely"
+								id="definitely" />
+							Definitely</label
+						>
+						<label>
+							<input
+								type="radio"
+								name="recommend"
+								class="input-radio"
+								value="maybe"
+								id="maybe" />
+							Maybe</label
+						>
+						<label>
+							<input
+								type="radio"
+								name="recommend"
+								class="input-radio"
+								value="not-sure"
+								id="not-sure" />
+							Not sure</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<label>
+						What skills do you want to improve?
+						<span class="clue">(Check all that apply)</span>
+					</label>
+					<div class="error" id="preferenceErr"></div>
+					<div class="form-inline" id="preference">
+						<label>
+							<input
+								type="checkbox"
+								name="preference"
+								value="android-dev"
+								class="input-checkbox"
+								id="android-dev" />
+							Android Developer</label
+						>
+						<label>
+							<input
+								type="checkbox"
+								name="preference"
+								value="ios-dev"
+								class="input-checkbox"
+								id="ios-dev" />
+							iOS Developer</label
+						>
+						<label>
+							<input
+								type="checkbox"
+								name="preference"
+								value="fe-webdev"
+								class="input-checkbox"
+								id="fe-webdev" />
+							Front-End Web Developer</label
+						>
+						<label>
+							<input
+								type="checkbox"
+								name="preference"
+								value="be-webdev"
+								class="input-checkbox"
+								id="be-webdev" />
+							Back-End Web Developer</label
+						>
+						<label>
+							<input
+								type="checkbox"
+								name="preference"
+								value="ui-ux-design"
+								class="input-checkbox"
+								id="ui-ux-design" />
+							UI/UX Design</label
+						>
+					</div>
+				</div>
+				<div class="form-group">
+					<p>Any comments or suggestions?</p>
+					<textarea
+						name="comment"
+						id="comment"
+						cols="30"
+						rows="10"
+						placeholder="Enter your comment here..."></textarea>
+					<div class="error"></div>
+				</div>
+				<div class="form-group">
+					<button type="submit" id="submit" class="submit-button">
+						Submit
+					</button>
+				</div>
+			</div>
+		</form>
+		<script src="script.js"></script>
+	</body>
+</html>
